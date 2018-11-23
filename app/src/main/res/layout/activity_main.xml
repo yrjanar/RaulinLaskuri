@@ -43,7 +43,7 @@
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:onClick="onaddClick"
+        android:onClick="onClick"
         android:text="LASKE"
         app:layout_constraintEnd_toStartOf="@+id/result"
         app:layout_constraintStart_toEndOf="@+id/number2" />
@@ -103,7 +103,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:onClick="onaddClick"
+        android:onClick="onClick"
         android:text="LASKE"
         app:layout_constraintEnd_toStartOf="@+id/result2"
         app:layout_constraintStart_toEndOf="@+id/number4"
@@ -158,7 +158,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:onClick="onaddClick"
+        android:onClick="onClick"
         android:text="LASKE"
         app:layout_constraintEnd_toStartOf="@+id/result3"
         app:layout_constraintStart_toEndOf="@+id/number6"
@@ -212,7 +212,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:onClick="onaddClick"
+        android:onClick="onClick"
         android:text="LASKE"
         app:layout_constraintEnd_toStartOf="@+id/result4"
         app:layout_constraintHorizontal_bias="0.538"
@@ -233,20 +233,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="22dp"
-        android:onClick="onaddClick"
+        android:onClick="onClick"
         android:text="Tyhjennä kaikki"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextView7" />
-
-    <Button
-        android:id="@+id/NaytaLogi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="22dp"
-        android:text="NÃYTÃ LOGI"
-        app:layout_constraintStart_toEndOf="@+id/ClearAll"
-        app:layout_constraintTop_toBottomOf="@+id/number8" />
 
     <TextView
         android:id="@+id/textViewLogi"
@@ -260,18 +250,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewLogi2"
-        android:layout_width="382dp"
-        android:layout_height="509dp"
-        android:fitsSystemWindows="true"
-        android:text=""
-        android:textAppearance="@style/TextAppearance.AppCompat"
-
-
-
-
-
-        />
+    <Button
+        android:id="@+id/NaytaLogi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="NAYTA LOGI"
+        app:layout_constraintStart_toEndOf="@+id/ClearAll"
+        app:layout_constraintTop_toTopOf="@+id/ClearAll" />
 
 </android.support.constraint.ConstraintLayout>

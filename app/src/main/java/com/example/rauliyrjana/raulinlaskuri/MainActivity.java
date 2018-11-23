@@ -4,13 +4,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private Data data;
     private TextView textViewLogi;
-    private TextView textViewLogi2;
     String msg = "Laskuri: ";
 
     @Override
@@ -26,17 +26,18 @@ public class MainActivity extends AppCompatActivity {
     /**
      * kun kÃ¤yttÃ¤jÃ¤ painaa jotain Laske -napeista, niin...
      */
-    public void onaddClick(View a) {
+    public void onClick(View a) {
         String TAG = "ANTURA: ";
         MainActivity.class.getSimpleName();
 
         if (a.getId() == R.id.Badd) { // jos nappi on + -rivillä
+            System.out.println("lasketaan plussaa");
             EditText a1 = (EditText) findViewById(R.id.number1);
             EditText a2 = (EditText) findViewById(R.id.number2);
 
             double num1, num2;
-            num1 = Double.parseDouble(a1.getText().toString());
-            num2 = Double.parseDouble(a2.getText().toString());
+            num1 = Integer.parseInt(a1.getText().toString());
+            num2 = Integer.parseInt(a2.getText().toString());
 
             double ans = num1 + num2; // lasketaan num1 ja num2 yhteen
 
@@ -134,13 +135,13 @@ public class MainActivity extends AppCompatActivity {
             t4.setText("");
         }
         if (a.getId() == R.id.NaytaLogi) {
-            textViewLogi.setText("");
-            //textViewLogi.setText(data.getData());
+            textViewLogi.setText(data.getData());
         }
     }
     @Override
     protected void onPause() {
         super.onPause();
+        System.out.println();
         data.kirjoitaTiedostoon(this);
     }
 }
